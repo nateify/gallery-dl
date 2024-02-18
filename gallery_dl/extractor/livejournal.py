@@ -15,7 +15,7 @@ import re
 
 
 class LiveJournalExtractor(Extractor):
-    """Base class for paheal extractors"""
+    """Base class for LiveJournal extractors"""
 
     category = "livejournal"
     filename_fmt = "{category}_{journal[username]}_{id}_{num}.{extension}"
@@ -55,8 +55,6 @@ class LiveJournalExtractor(Extractor):
             if response.status_code >= 400:
                 return {}
             page = response.text
-
-        # files = self._extract_images
 
         article_element = re.search(r"<article[^>]*class=\" *b-singlepost[^>]*>(.*?)</article>", page, re.DOTALL)
 
@@ -100,7 +98,6 @@ class LiveJournalExtractor(Extractor):
         return data, image_urls
 
     def _extract_images(self, page):
-
         return
 
 
