@@ -84,7 +84,6 @@ modules = [
     "kemonoparty",
     "khinsider",
     "komikcast",
-    "livejournal",
     "lensdump",
     "lexica",
     "lightroom",
